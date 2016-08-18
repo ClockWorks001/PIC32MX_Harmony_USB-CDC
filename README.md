@@ -6,7 +6,7 @@ It is USB-CDC project that copied from cdc_com_port_single sample project.
 ## Description
 
 References.
-  <http://microchip.wikidot.com/harmony:tmr-sys>
+  <http://microchip.wikidot.com/harmony:usb-device-architecture>
 
 ## Prerequisites
 
