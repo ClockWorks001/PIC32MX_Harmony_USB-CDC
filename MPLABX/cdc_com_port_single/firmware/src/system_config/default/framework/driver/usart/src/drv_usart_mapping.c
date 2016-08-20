@@ -239,7 +239,8 @@ uint8_t DRV_USART_ReadByte( const DRV_HANDLE handle )
         }
         default:
         {
-            returnValue = (uint8_t)NULL;
+            SYS_ASSERT(false, "Incorrect Driver Handle");
+            returnValue = 0;
             break;
         }
     }

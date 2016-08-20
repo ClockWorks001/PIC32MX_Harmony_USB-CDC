@@ -388,7 +388,8 @@ void APP_Initialize ( void )
     appData.isConfigured = false;
 
     /* Initial get line coding state */
-    appData.getLineCodingData.dwDTERate = 9600;
+//    appData.getLineCodingData.dwDTERate = ;
+    appData.getLineCodingData.dwDTERate = 115200;
     appData.getLineCodingData.bParityType =  0;
     appData.getLineCodingData.bParityType = 0;
     appData.getLineCodingData.bDataBits = 8;
@@ -504,18 +505,18 @@ void APP_Tasks (void )
                 break;
             }
 
-            APP_ProcessSwitchPress();
-
+// comment out APP_ProcessSwitchPress            
+//            APP_ProcessSwitchPress();
             /* Check if a character was received or a switch was pressed.
              * The isReadComplete flag gets updated in the CDC event handler. */
 
-            if(appData.isReadComplete || appData.isSwitchPressed)
+//            if(appData.isReadComplete || appData.isSwitchPressed)
+            if(appData.isReadComplete)
             {
                 appData.state = APP_STATE_SCHEDULE_WRITE;
             }
 
             break;
-
 
         case APP_STATE_SCHEDULE_WRITE:
 
@@ -525,11 +526,10 @@ void APP_Tasks (void )
             }
 
             /* Setup the write */
-
             appData.writeTransferHandle = USB_DEVICE_CDC_TRANSFER_HANDLE_INVALID;
             appData.isWriteComplete = false;
             appData.state = APP_STATE_WAIT_FOR_WRITE_COMPLETE;
-
+#if 0 //comment out
             if(appData.isSwitchPressed)
             {
                 /* If the switch was pressed, then send the switch prompt*/
@@ -540,14 +540,19 @@ void APP_Tasks (void )
             }
             else
             {
-                /* Else echo the received character + 1*/
-                appData.readBuffer[0] = appData.readBuffer[0] + 1;
+#endif
+//                /* Else echo the received character + 1*/
+//                appData.readBuffer[0] = appData.readBuffer[0] + 1;
+
+                // It's a simple return to serial console.
+                appData.readBuffer[0] = appData.readBuffer[0];
                 USB_DEVICE_CDC_Write(USB_DEVICE_CDC_INDEX_0,
                         &appData.writeTransferHandle,
                         appData.readBuffer, 1,
                         USB_DEVICE_CDC_TRANSFER_FLAGS_DATA_COMPLETE);
+#if 0 //comment out
             }
-
+#endif
             break;
 
         case APP_STATE_WAIT_FOR_WRITE_COMPLETE:

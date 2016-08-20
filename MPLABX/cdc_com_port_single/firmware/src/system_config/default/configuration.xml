@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <configuration version="1.0.8.7">
   <General>
-    <HarmonyPath path="../../../../../../Microchip/harmony/v1_07_01"/>
+    <HarmonyPath path="../../../../../../Microchip/harmony/v1_08_01"/>
     <Processor name="PIC32MX250F128D"/>
     <ForceOptimization flag="true"/>
     <MergeStrategy flag="USER_ALL"/>
@@ -9,24 +9,124 @@
   <Manifest>
     <Files>
       <File>
+        <Name>osal_impl_basic.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>peripheral_common_32bit.h</Name>
+        <Path>Header Files/framework/peripheral</Path>
+      </File>
+      <File>
+        <Name>usb_billboard.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
         <Name>drv_usbfs.c</Name>
         <Path>Source Files/framework/driver/usb/usbfs/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>drv_usbfs_local.h</Name>
+        <Path>Header Files/framework/driver/usb/usbfs/src</Path>
+      </File>
+      <File>
+        <Name>driver_common.h</Name>
+        <Path>Header Files/framework/driver</Path>
       </File>
       <File>
         <Name>sys_devcon.c</Name>
         <Path>Source Files/framework/system/devcon/src</Path>
       </File>
       <File>
-        <Name>usb_device.h</Name>
-        <Path>Header Files/framework/usb</Path>
-      </File>
-      <File>
-        <Name>sys_ports.c</Name>
-        <Path>Source Files/framework/system/ports/src</Path>
+        <Name>osal.h</Name>
+        <Path>Header Files/framework/osal</Path>
       </File>
       <File>
         <Name>usb_device_cdc.h</Name>
         <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>drv_usbhs.h</Name>
+        <Path>Header Files/framework/driver/usb/usbhs</Path>
+      </File>
+      <File>
+        <Name>drv_usbfs_static.h</Name>
+        <Path>Header Files/framework/driver/usb/usbfs</Path>
+      </File>
+      <File>
+        <Name>usb_device_local.h</Name>
+        <Path>Header Files/framework/usb/src</Path>
+      </File>
+      <File>
+        <Name>usb_common.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>sys_ports.h</Name>
+        <Path>Header Files/framework/system/ports</Path>
+      </File>
+      <File>
+        <Name>usb_chapter_9.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>driver.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>peripheral_common.h</Name>
+        <Path>Header Files/framework/peripheral</Path>
+      </File>
+      <File>
+        <Name>sys_common.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_buffer.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_int_pic32.c</Name>
+        <Path>Source Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>usb_device_mapping.h</Name>
+        <Path>Header Files/framework/usb/src</Path>
+      </File>
+      <File>
+        <Name>usb_device.c</Name>
+        <Path>Source Files/framework/usb/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>sys_clk.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>osal_impl_none.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>sys_clk_mapping.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>osal_definitions.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>sys_int_mapping.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+      <File>
+        <Name>usb_device.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>gfx_palette.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>sys_int_private.h</Name>
+        <Path>Header Files/framework/system/int/src</Path>
       </File>
       <File>
         <Name>sys_devcon.h</Name>
@@ -41,6 +141,10 @@
         <Path>Source Files/framework/driver/usb/usbfs/src/dynamic</Path>
       </File>
       <File>
+        <Name>sys_debug.h</Name>
+        <Path>Header Files/framework/system/debug</Path>
+      </File>
+      <File>
         <Name>usb_device_cdc_acm.c</Name>
         <Path>Source Files/framework/usb/src/dynamic</Path>
       </File>
@@ -53,24 +157,32 @@
         <Path>Header Files/framework/usb</Path>
       </File>
       <File>
-        <Name>sys_ports.h</Name>
-        <Path>Header Files/framework/system/ports</Path>
-      </File>
-      <File>
         <Name>sys_devcon_pic32mx.c</Name>
         <Path>Source Files/framework/system/devcon/src</Path>
       </File>
       <File>
-        <Name>driver.h</Name>
-        <Path>Header Files/framework/driver</Path>
+        <Name>drv_usbfs.h</Name>
+        <Path>Header Files/framework/driver/usb/usbfs</Path>
       </File>
       <File>
-        <Name>sys_common.h</Name>
+        <Name>sys_devcon_local.h</Name>
+        <Path>Header Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>drv_usbfs_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/usb/usbfs/src</Path>
+      </File>
+      <File>
+        <Name>usb_device_cdc_local.h</Name>
+        <Path>Header Files/framework/usb/src</Path>
+      </File>
+      <File>
+        <Name>peripheral.h</Name>
+        <Path>Header Files/framework/peripheral</Path>
+      </File>
+      <File>
+        <Name>sys_queue.h</Name>
         <Path>Header Files/framework/system/common</Path>
-      </File>
-      <File>
-        <Name>sys_int_pic32.c</Name>
-        <Path>Source Files/framework/system/int/src</Path>
       </File>
       <File>
         <Name>usb_device_cdc.c</Name>
@@ -81,8 +193,8 @@
         <Path>Header Files/framework/system/int</Path>
       </File>
       <File>
-        <Name>usb_device.c</Name>
-        <Path>Source Files/framework/usb/src/dynamic</Path>
+        <Name>drv_usbfs_mapping.h</Name>
+        <Path>Header Files/framework/driver/usb/usbfs</Path>
       </File>
       <File>
         <Name>drv_usb.h</Name>
@@ -98,7 +210,7 @@
       <Template>
         <Name>sys_ports_static.c</Name>
         <Path>Source Files/app/system_config/default/framework/system/ports/src</Path>
-        <Checksum>44349375312EAD626D77561CA0AAB660</Checksum>
+        <Checksum>7F062AB47AFAC69E501D1EF58EEB5E0E</Checksum>
       </Template>
       <Template>
         <Name>system_init.c</Name>
@@ -126,7 +238,7 @@
       <Template>
         <Name>drv_usart_mapping.c</Name>
         <Path>Source Files/app/system_config/default/framework/driver/usart/src</Path>
-        <Checksum>6FD05276C282527C549242F87ABC8DEB</Checksum>
+        <Checksum>99B1234D6368258201525EBAE6D7FADE</Checksum>
       </Template>
       <Template>
         <Name>drv_usart_static.h</Name>
@@ -146,7 +258,7 @@
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/default</Path>
-        <Checksum>ADADECC809D0D921BF1C24B5985E2FD0</Checksum>
+        <Checksum>4C0E02672E9028B22ED9070BADBAD77F</Checksum>
       </Template>
       <Template>
         <Name>app.h</Name>
@@ -175,15 +287,16 @@
     </Templates>
     <CompilerItems>
       <C32>
-        <Include value="C:\app01\APIC\PIC32MX\20160815_PIC32MX250_Harmony_USB\MPLABX\USB_CDC_SERIAL\firmware\src"/>
-        <Include value="C:\app01\APIC\PIC32MX\20160815_PIC32MX250_Harmony_USB\MPLABX\USB_CDC_SERIAL\firmware\src\system_config\default"/>
-        <Include value="C:\app01\APIC\PIC32MX\20160815_PIC32MX250_Harmony_USB\MPLABX\USB_CDC_SERIAL\firmware\src\default"/>
-        <Include value="C:\Microchip\harmony\v1_07_01\framework"/>
-        <Include value="C:\app01\APIC\PIC32MX\20160815_PIC32MX250_Harmony_USB\MPLABX\USB_CDC_SERIAL\firmware\src\system_config\default\framework"/>
+        <Include value="C:\app01\APIC\PIC32MX\20160815_PIC32MX250_Harmony_USB-CDC\MPLABX\cdc_com_port_single\firmware\src"/>
+        <Include value="C:\app01\APIC\PIC32MX\20160815_PIC32MX250_Harmony_USB-CDC\MPLABX\cdc_com_port_single\firmware\src\system_config\default"/>
+        <Include value="C:\app01\APIC\PIC32MX\20160815_PIC32MX250_Harmony_USB-CDC\MPLABX\cdc_com_port_single\firmware\src\default"/>
+        <Include value="C:\Microchip\harmony\v1_08_01\framework"/>
+        <Include value="C:\app01\APIC\PIC32MX\20160815_PIC32MX250_Harmony_USB-CDC\MPLABX\cdc_com_port_single\firmware\src\system_config\default\framework"/>
       </C32>
     </CompilerItems>
     <Libraries>
-      <Library value="../../../../../../../../Microchip/harmony/v1_07_01/bin/framework/peripheral/PIC32MX250F128D_peripherals.a"/>
+      <Library value="../../../../../../../../Microchip/harmony/v1_08_01/framework/tcpip/src/crypto/aes_pic32mx.a"/>
+      <Library value="../../../../../../../../Microchip/harmony/v1_08_01/bin/framework/peripheral/PIC32MX250F128D_peripherals.a"/>
     </Libraries>
   </Manifest>
 </configuration>

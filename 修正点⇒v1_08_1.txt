@@ -1,0 +1,13 @@
+﻿Harmony の version をv1.0.7⇒v1.0.8 へ上げたので、下記configをエディタで直接変更 20160820
+
+○configuration.xml
+C:\app01\APIC\PIC32MX\20160815_PIC32MX250_Harmony_USB-CDC\MPLABX\cdc_com_port_single\firmware\src\system_config\default\configuration.xml
+
+
+○configurations.xml
+C:\app01\APIC\PIC32MX\20160815_PIC32MX250_Harmony_USB-CDC\MPLABX\cdc_com_port_single\firmware\cdc_com_port_single.X\nbproject\configurations.xml
+
+
+○Makefile-default.mk
+C:\app01\APIC\PIC32MX\20160815_PIC32MX250_Harmony_USB-CDC\MPLABX\cdc_com_port_single\firmware\cdc_com_port_single.X\nbproject\Makefile-default.mk
+
